@@ -1,16 +1,15 @@
 import React from 'react';
 import CartWidget from '../CartWidget/CartWidget';
-import { Navbar, Nav, NavDropdown, Container, Form, FormControl, Button } from 'react-bootstrap'
-//import Logo from '../../favicon.icon'
+import { Navbar, Nav, NavDropdown, Container} from 'react-bootstrap'
+import LogoPlanta from '../../imagenes/maceta.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export const NavBar = () => {
 
     return (      
-<Navbar bg="dark" expand="lg" variant="dark">
+<Navbar bg="light" expand="lg" variant="light">
 <Container>
-  <Navbar.Brand href="#home">Pet Shop</Navbar.Brand>
-  {/* <img src={Logo} alt='img'></img> */}
+  <Navbar.Brand href="#home"> <img src={LogoPlanta} alt='planta'></img> Plantasia</Navbar.Brand>
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
   <Navbar.Collapse id="basic-navbar-nav">
     <Nav className="mr-auto">
@@ -25,8 +24,8 @@ export const NavBar = () => {
       </NavDropdown>
     </Nav>
     <Nav>
-    <Nav.Link eventKey={2}>
-      <CartWidget/>
+    <Nav.Link eventKey={2}> 
+    <CartWidget/>
     </Nav.Link>
     </Nav>
   </Navbar.Collapse>
