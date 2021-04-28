@@ -1,11 +1,12 @@
 import React from 'react';
 import Logo from '../../imagenes/bolsa.png';
 
+
 const CartWidget = () => {
     return (
-       <div>
-           <a>
-            <img src={Logo} alt='carrito'></img>
+       <div className="navbar-right">
+           <a href="#">
+            <img src={Logo} alt='carrito'><span className="cantidad">0</span></img>
             </a>
        </div>
     )

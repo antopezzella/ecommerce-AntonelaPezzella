@@ -1,13 +1,16 @@
 import React, {useState, useEffect} from 'react';
 import ItemList from './Items/ItemList';
+import { useParams } from 'react-router-dom'
+import loading from '../imagenes/loader.gif'
 
 
 export default function ItemListContainer() {
 
-    const [ datos, setDatos ] = useState([])
+    const [ datos, setDatos ] = useState({});
+    const {id} = useParams()
 
     useEffect(()=>{
-        const prueba = new Promise ((resolve,reject)=>{
+        const productos = new Promise ((resolve,reject)=>{
             const catalogo = [
             {id:1,
             imagen:'src/imagenes/dracena.jpg',
@@ -31,16 +34,26 @@ export default function ItemListContainer() {
             setTimeout(()=>{
                 resolve(catalogo)
               },3000)
-        }
-    )
-        
+        })
+
+    productos.then((res) =>{
+        const newCateg = res.filter (x => x.category === `${id}`);
+        id === undefined ?
+        setDatos(res)  : setDatos (newCateg)    
+})
+.catch(()=>{
+    console.log ("No se puede cargar la página")
+})
+.finally(()=>{
+     console.log("Ya finalizó")
 })
 
+},[id])
 
     return (
         <>
         <div className="contenedor" style={{textAlign:"center"}}>
-            <div className="login">
+            <div className="row">
                <h2 className="mensaje">Categorías destacadas</h2>
                 {/* <img src={img}/>  */}
             </div>
@@ -60,9 +73,11 @@ export default function ItemListContainer() {
                 </div>
             </div>
     </div>
-    <div className="container">
-         <ItemList productos={datos}/>
-    </div>
+    <div className="catalogo"> Catalogo</div>
+    {datos.length > 0 ? datos.map((dato) =>
+         <ItemList productos={dato}/>)
+         : <img src={loading}/>}
+    
     </div>
     </>
     )
