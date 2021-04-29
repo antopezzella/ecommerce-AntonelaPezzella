@@ -1,15 +1,13 @@
 import React from 'react';
 
 const ItemDetail = ({dato}) => {
-
-
     return (
         <>
         <div key={dato.id} className="container py-md-5">
             <div className="left-ads-display">
                 <div className="row">
                     <div className="desc1-izq col-md-6">
-                        <img src={dato.imag} className="img-fluid" />
+                        <img src={dato.img} className="img-fluid" />
                     </div>
                     <div className="desc1-derch col-md-6 pl-lg-3">
                         <h2>{dato.title}</h2>
@@ -35,9 +33,7 @@ const ItemDetail = ({dato}) => {
                 <h5 className="shop-detail">{dato.description}</h5>
             </div>
         </div>
-
         </>
-    )
-}
+    )}
 
 export default ItemDetail

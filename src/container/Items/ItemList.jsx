@@ -2,16 +2,17 @@ import React from 'react';
 import Item from './Item';
 
 
-
 const ItemList = ({ productos }) =>  {
-
+    console.log(productos) 
     return (
      <>
-     <div className="col-lg-3 shop-info-grid mt-4">
-         <Item id={productos.id} img={productos.imag} description={productos.description} precio={productos.precio} stock={productos.stockT}/>
+     <div className="card">
+       { productos.map((prod) => (
+          <Item key={prod.id} {...prod}/>
+       ))}
      </div>
      </>
     );
 };
 
-export default ItemList
+export default ItemList;

@@ -1,0 +1,20 @@
+* {
+    box-sizing: border-box;
+}
+
+ .card
+{       display:flex;
+        justify-content: space-around;   
+        flex-direction:row;     
+        margin: 1rem;
+}
+
+.titulos-productos {
+    color:black
+}
+
+
+.btn-stock {
+    display:inline-flex;
+}
+
