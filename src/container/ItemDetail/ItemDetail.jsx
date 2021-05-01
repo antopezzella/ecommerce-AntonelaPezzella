@@ -1,17 +1,17 @@
 import React from 'react';
 
-const ItemDetail = ({dato}) => {
+const ItemDetail = ({datos}) => {
     return (
         <>
-        <div key={dato.id} className="container py-md-5">
+        <div key={datos.id} className="container py-md-5">
             <div className="left-ads-display">
                 <div className="row">
                     <div className="desc1-izq col-md-6">
-                        <img src={dato.img} className="img-fluid" />
+                        <img src={datos.img} className="img-fluid" />
                     </div>
                     <div className="desc1-derch col-md-6 pl-lg-3">
-                        <h2>{dato.title}</h2>
-                        <h3>Precio: {dato.precio}</h3>
+                        <h2>{datos.title}</h2>
+                        <h3>Precio: {datos.precio}</h3>
                         <div className="disponible mt-3">
                         </div>
                         <div className="buscar-desc mt-5">
@@ -29,8 +29,8 @@ const ItemDetail = ({dato}) => {
                     </div>
                 </div>
             </div>
-            <div className="row my-5">
-                <h5 className="shop-detail">{dato.description}</h5>
+            <div className="row my-6">
+                <h5 className="shop-detail">{datos.description}</h5>
             </div>
         </div>
         </>

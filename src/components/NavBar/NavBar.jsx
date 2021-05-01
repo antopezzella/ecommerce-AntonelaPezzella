@@ -9,14 +9,17 @@ export const NavBar = () => {
     return (      
 <Navbar bg="#FFFFFF" expand="lg" variant="light">
 <Container>
-   <img src={LogoPlantasia} alt='planta' style={{width:'15%'}}></img>
+   <img src={LogoPlantasia} alt='planta' style={{width:'14%'}}></img>
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
   <Navbar.Collapse id="basic-navbar-nav">
     <Nav className="mr-auto" style={{marginLeft:"1em"}}>
     <Nav.Link href="#home">Home</Nav.Link>
       <Nav.Link href="#home">Inspiración</Nav.Link>
       <Nav.Link href="#link">Cuidados</Nav.Link>
-      <Nav.Link href="#link">Plantas</Nav.Link>
+      <NavDropdown title="Plantas" id="basic-nav-dropdown">
+        <NavDropdown.Item href="category/interior">Plantas de interior</NavDropdown.Item>
+        <NavDropdown.Item href="category/exterior">Plantas de exterior</NavDropdown.Item>
+      </NavDropdown>
     </Nav>
     <Nav>
     <Nav.Link eventKey={2}> 

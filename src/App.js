@@ -4,24 +4,25 @@ import React from 'react';
 import { NavBar } from './components/NavBar/NavBar';
 import ItemListContainer from './container/ItemListContainer';
 import  { BrowserRouter, Switch, Route } from 'react-router-dom';
-
+import ItemDetailContainer from './container/ItemDetailContainer'
+import Footer from './container/Footer'
 
 function App() {
   return (
     <BrowserRouter>
-    <div className="App">
-      <header className="App-Header">
-        <NavBar/>
-      </header>
+      <NavBar/>
       <Switch>
-        <Route path='item/1'>
+      <Route path='/category/:id'>
+          <ItemListContainer/>
         </Route>
-        <Route exact path='item/2'>
+        <Route path='/item/:id'>
+          <ItemDetailContainer/>
         </Route>
-      <ItemListContainer/>
+        <Route path='/'>
+          <ItemListContainer/>
+        </Route>
       </Switch>
-      
-    </div>
+      <Footer/>
     </BrowserRouter>
   );
 }

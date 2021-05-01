@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import ItemList from './Items/ItemList';
 import { useParams } from 'react-router-dom';
-import loading from '../imagenes/loader.gif';
 import Carousel from 'react-bootstrap/Carousel';
 import Foto1 from '../imagenes/orquideavanda.jpg';
 import Banner from '../imagenes/plantasiabanner.png'
@@ -16,18 +15,21 @@ export default function ItemListContainer() {
             const catalogo = [
             {id:1,
             imagen:Foto1,
+            category:'interior',
             title:'Drácena Dorado',
             description:'La drácena dorado es una variedad de la dracaena deremensis y tiene hojas de color verde oscuro sólido con los bordes amarillos. Como el resto de drácenas, sufre una progresiva pérdida de las hojas inferiores durante su crecimiento, de modo que acaba adoptando una forma similar a la de una palmera, aunque sus hojas son más rizadas y adquieren una forma compacta.',
             stockT:'4',
             precio:'4000'},
             {id:2,
             imagen:Foto1,
+            category:'interior',
             title:'Orquídea Duetto',
             description:'Dentro de la familia de las orquídeas , las phalaenopsis podrían considerarse las de más fácil cultivo. Las hay con flores de distintos colores, a veces con manchas, y más o menos grandes. Es importante que las raíces aéreas se mantengan sanas, en un recipiente transparente para que puedan realizar la fotosíntesis y adquieran un color verde intenso y cierta turgencia, signos ambos de su buena salud.',
             stockT:'3',
             precio:'5000'},
             {id:3,
             imagen:Foto1,
+            category:'interior',
             title:'Ficus Benjamín Trenzado',
             description:'Más delicado que otros ficus, el benjamina se caracteriza por sus hojas verdes y brillantes y las posibilidades decorativas que ofrece su tronco, a veces esculpido, a veces trenzado.',
             stockT:'3',
@@ -39,10 +41,9 @@ export default function ItemListContainer() {
         })
 
     productos.then((res) =>{
-        const newCateg = res.filter (x => x.category === `${id}`);
-        id === undefined ?
-        setDatos(res)  : setDatos (newCateg)    
+       setDatos(res)  
 })
+
 .catch(()=>{
     console.log ("No se puede cargar la página")
 })
@@ -115,7 +116,6 @@ export default function ItemListContainer() {
     <div className="contendedor" style={{textAlign:'center'}}>
     <h2 className="catalogo" >Catálogo</h2>
     <ItemList productos={datos}/>
-     <img src={loading}/>
      </div>
     </>
     )
