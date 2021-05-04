@@ -15,7 +15,7 @@ const Item = ({id,imagen,title,description,stockT,precio}) => {
                <h3>
                    <a href="#" className="titulos-productos">{title}</a>
                </h3>
-               <div>{description}</div>
+               <div className="descripcion">{description}</div>
                <div className="precio-producto">
                  <div className="espacio-precio">
                    <span className="precio">${precio}</span>

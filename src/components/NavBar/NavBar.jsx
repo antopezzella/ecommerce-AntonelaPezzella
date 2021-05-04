@@ -17,8 +17,8 @@ export const NavBar = () => {
       <Nav.Link href="#home">Inspiración</Nav.Link>
       <Nav.Link href="#link">Cuidados</Nav.Link>
       <NavDropdown title="Plantas" id="basic-nav-dropdown">
-        <NavDropdown.Item href="category/interior">Plantas de interior</NavDropdown.Item>
-        <NavDropdown.Item href="category/exterior">Plantas de exterior</NavDropdown.Item>
+        <NavDropdown.Item href="/category/interior">Plantas de interior</NavDropdown.Item>
+        <NavDropdown.Item href="/category/exterior">Plantas de exterior</NavDropdown.Item>
       </NavDropdown>
     </Nav>
     <Nav>

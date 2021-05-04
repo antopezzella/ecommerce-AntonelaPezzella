@@ -6,7 +6,9 @@
  .card
 {       display:flex;
         justify-content: space-around;   
-        flex-direction:row;     
+        flex-direction:row;
+        flex-wrap: wrap; 
+        align-content: stretch;  
         margin: 1rem;
 }
 
@@ -14,6 +16,11 @@
     color:black
 }
 
+.descripcion {
+    font-size: 1em;
+    margin: auto;
+    width: 300px; 
+}
 
 .btn-stock {
     display:inline-flex;
