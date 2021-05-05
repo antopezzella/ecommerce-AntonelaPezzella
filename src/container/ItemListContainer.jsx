@@ -5,6 +5,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import Foto1 from '../imagenes/orquideavanda.jpg';
 import Banner from '../imagenes/plantasiabanner.png'
 
+
 export default function ItemListContainer() {
 
     const [ datos, setDatos ] = useState([]);
@@ -137,6 +138,7 @@ export default function ItemListContainer() {
     <div className="contendedor" style={{textAlign:'center'}}>
     <h2 className="catalogo" >Catálogo</h2>
     <ItemList productos={datos}/>
+    
      </div>
     </>
     )

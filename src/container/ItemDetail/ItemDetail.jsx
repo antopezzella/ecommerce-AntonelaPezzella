@@ -7,7 +7,7 @@ const ItemDetail = ({datos}) => {
             <div className="left-ads-display">
                 <div className="row">
                     <div className="desc1-izq col-md-6">
-                        <img src={datos.img} className="img-fluid" />
+                        <img src={datos.imagen} className="img-fluid" />
                     </div>
                     <div className="desc1-derch col-md-6 pl-lg-3">
                         <h2>{datos.title}</h2>

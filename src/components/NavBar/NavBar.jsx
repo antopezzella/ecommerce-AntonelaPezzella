@@ -3,6 +3,7 @@ import CartWidget from '../CartWidget/CartWidget';
 import { Navbar, Nav, NavDropdown, Container} from 'react-bootstrap'
 import LogoPlantasia from '../../imagenes/plantasialogo.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Link } from 'react-router-dom'
 
 export const NavBar = () => {
 
@@ -17,8 +18,8 @@ export const NavBar = () => {
       <Nav.Link href="#home">Inspiración</Nav.Link>
       <Nav.Link href="#link">Cuidados</Nav.Link>
       <NavDropdown title="Plantas" id="basic-nav-dropdown">
-        <NavDropdown.Item href="/category/interior">Plantas de interior</NavDropdown.Item>
-        <NavDropdown.Item href="/category/exterior">Plantas de exterior</NavDropdown.Item>
+        <NavDropdown.Item><Link to={`/interior`} className="link">Plantas de interior</Link></NavDropdown.Item>
+        <NavDropdown.Item><Link to={`/exterior`} className="link">Plantas de exterior</Link></NavDropdown.Item>
       </NavDropdown>
     </Nav>
     <Nav>
