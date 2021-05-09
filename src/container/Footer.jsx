@@ -1,4 +1,5 @@
 import React from 'react';
+import LogoPlantasia from '../imagenes/plantasialogo.png';
 import './footer.css'
 
 export const Footer = () => {
@@ -27,7 +28,7 @@ export const Footer = () => {
     </div>
     <div class="ft-main-item">
       <h2 class="ft-title">Newsletter</h2>
-      <p>¡Subscrite al newsletter y recibí todas nuestras novedades!</p>
+      <p class="suscribite">¡Subscrite al newsletter y recibí todas las novedades!</p>
       <form>
         <input type="email" name="email" placeholder="Email"/>
         <input type="submit" value="Suscribirse"/>

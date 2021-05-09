@@ -15,8 +15,9 @@ const ItemDetailContainer =() => {
             {id:1,
             imagen:Foto1,
             category:'interior',
-            title:'Drácena Dorado',
-            description:'La drácena dorado es una variedad de la dracaena deremensis y tiene hojas de color verde oscuro sólido con los bordes amarillos. Como el resto de drácenas, sufre una progresiva pérdida de las hojas inferiores durante su crecimiento, de modo que acaba adoptando una forma similar a la de una palmera, aunque sus hojas son más rizadas y adquieren una forma compacta.',
+            title:'Calathea Orbifolia',
+            description:'La Calathea Orbifolia es una variedad procedente de la selva tropical, con unas exóticas hojas de gran tamaño y forma redondeada. ¡Su estampado en tonos verdes te asombrarán!',
+            consejos: 'Sitúala en zonas poco iluminadas, donde no reciba luz directa. Al ser una planta tropical, necesitará un ambiente ligeramente húmedo. Evita las zonas con corrientes. Los riegos deben ser abundantes durante la época cálida, el resto del año realiza riegos moderados.',
             stockT:'4',
             precio:'4000'},
             {id:2,
@@ -24,20 +25,23 @@ const ItemDetailContainer =() => {
             category:'interior',
             title:'Orquídea Duetto',
             description:'Dentro de la familia de las orquídeas , las phalaenopsis podrían considerarse las de más fácil cultivo. Las hay con flores de distintos colores, a veces con manchas, y más o menos grandes. Es importante que las raíces aéreas se mantengan sanas, en un recipiente transparente para que puedan realizar la fotosíntesis y adquieran un color verde intenso y cierta turgencia, signos ambos de su buena salud.',
+            consejos: 'Mantenla en una zona muy luminosa, pero sin que le dé el sol directo. Riégala para evitar la sequedad, pero intenta no encharcar sus hojas y raíces. Si el ambiente es muy seco, puedes pulverizar las hojas y las raíces, pero no las flores ya que podrías dañarlas.',
             stockT:'3',
             precio:'5000'},
             {id:3,
             imagen:Foto1,
             category:'interior',
-            title:'Ficus Benjamín Trenzado',
-            description:'Más delicado que otros ficus, el benjamina se caracteriza por sus hojas verdes y brillantes y las posibilidades decorativas que ofrece su tronco, a veces esculpido, a veces trenzado.',
+            title:'Ficus Moclamen Trenzado',
+            description:'Esta variedad erguida y robusta de ficus microcarpa es una habitual de la decoración interior. Las pequeñas hojas verdes y su tallo trenzado le darán un toque especial a cualquier espacio.',
+            consejos: 'Colócalo en un lugar luminoso y amplio. Puede incluso soportar el sol directo. Si se ubica en una zona sombría podría perder hojas. Puedes ir girando la planta cada mes, para dosificar equilibradamente la luz. Riégalo moderadamente, dejando que la tierra se seque antes del siguiente riego. Tolera los entornos secos, no es necesario pulverizar sus hojas con agua.',
             stockT:'3',
             precio:'6000'},
             {id:4,
             imagen:Foto1,
             category:'exterior',
-            title:'Cupressus Goldcrest Espiral',
-            description:'El Cupressus Goldcrest es uno de los arbustos más utilizados para decorar entradas y como elementos ornamentales de topiaria. Son tupidos y tiene un rápido crecimiento. Tiene una forma muy densa, en forma de espiral, con hojas de color verde claro. Es una variedad muy rústica que se adapta a cualquier tipo de suelo y resiste a las proximidades del mar. Aguanta bien el frío.',
+            title:'Camelia Japónica',
+            description:'La camelia es un arbusto o arbolillo de flores grandes, muy llamativas, de distintos colores según la variedad. Necesita suelos ácidos y es recomendable evitar colocarla a pleno sol. La camelia japonica es una de las especies de camelias más conocida y pertenece a la familia de las teáceas. Existen numerosos híbridos de esta especie, cuyas flores van del rojo al blanco, pasando por las multicolores. Altura aproximada: 112 cm',
+            consejos: 'Requiere riegos frecuentes en verano, pero no es recomendable regarla a finales de otoño, ni en invierno. Este arbusto agradece humedad ambiental y resguardarse del sol directo o cambios bruscos de temperatura.',
             stockT:'7',
             precio:'4500'},
             {id:5,
@@ -45,16 +49,18 @@ const ItemDetailContainer =() => {
             category:'exterior',
             title:'Adelfa Roja (Nerium Oleander)',
             description:'La adelfa puede que sea el arbusto más utilizado en jardines mediterráneos, pues se adapta a todo tipo de climatología. Es una planta muy rústica y con flores muy bellas y olorosas, que pueden ser simples, dobles o semidobles. Puede alcanzar alturas de 1 a 3 m.',
+            consejos:'Ten precaución con las hojas, son venenosas. Admite cualquier exposición, desde a pleno sol hasta en sombra, siempre que la temperatura no baje de 0 ºC. Es ideal para cultivarla en setos o en grupos.',
             stockT:'8',
             precio:'5000'},
             {id:6,
             imagen:Foto1,
             category:'exterior',
-            title:'Solanum Jasminoides',
-            description:'El Solanum Jasminoides, más conocido como Falso Jazmín, es originario de Sudamérica. Se caracteriza por su porte desordenado y sus perfumadas flores de color blanco. Al final estas flores dan unos frutos de color negro.',
+            title:'Bambú De Exterior (Phyllostachys Bissetti)',
+            description:'El Phyllostachys, más conocido como Bambú verde, es un arbusto con un tronco de fibra muy dura y hojas alargadas de tallos flexibles.',
+            consejos:'Aunque prefiere las zonas frescas, puede prosperar en lugares de sombra, semisombra y a pleno sol. Además, tolera los vientos marinos. Riégalo abundantemente en verano. No dejes que las raíces se lleguen a secar. Resiste el frío y las heladas.',
             stockT:'9',
             precio:'7000'},
-            ];
+            ]
             setTimeout(()=>{
                 resolve(catalogo);
               },2000) })
@@ -63,7 +69,7 @@ const ItemDetailContainer =() => {
                 const itemFilter = dato.filter(item => `${item.id}` === id)
                 console.log(itemFilter)
                 setDatos(itemFilter[0])})
-            },[]);
+            },[])
                         
     return (
         <>

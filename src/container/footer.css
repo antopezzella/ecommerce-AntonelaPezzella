@@ -1,5 +1,6 @@
 
   ul {
+    font-family: "Open Sans";
     list-style: none;
     padding-left: 0;
   }
@@ -21,14 +22,15 @@
     font-size: 1.375rem;
     padding-bottom: 0.625rem;
   }
-  /* Sticks footer to bottom */
-
+ 
+.suscribite {
+  font-family: 'Open Sans';
+}
   .container {
     flex: 1;
   }
-  /* Footer main */
+  
   .ft-main {
-    
     padding: 1.25rem 1.875rem;
     display: flex;
     flex-wrap: wrap;
@@ -67,7 +69,6 @@
     margin-top: 0.3125rem;
   }
 
-  /* Footer legal */
   .ft-legal {
     padding: 0.9375rem 1.875rem;
     background-color: #ce99b8;
@@ -78,6 +79,8 @@
     flex-wrap: wrap;
   }
   .ft-legal-list li {
+    font-size: 0.86em;
+    font-family: 'Open Sans';
     margin: 0.125rem 0.625rem;
     white-space: nowrap;
   }

@@ -1,4 +1,6 @@
 import React from 'react';
+import '../Items/item.css'
+
 
 const ItemDetail = ({datos}) => {
     return (
@@ -10,18 +12,22 @@ const ItemDetail = ({datos}) => {
                         <img src={datos.imagen} className="img-fluid" />
                     </div>
                     <div className="desc1-derch col-md-6 pl-lg-3">
-                        <h2>{datos.title}</h2>
-                        <h3>Precio: {datos.precio}</h3>
-                        <div className="disponible mt-3">
-                        </div>
-                        <div className="buscar-desc mt-5">
+                        <h2 className="titulos-productos2">{datos.title}</h2>
+                          <p className="descripcion" style={{marginTop:"1em"}}>{datos.description}</p>
+                          <div style={{marginTop:"1em"}}>
+                          <h3 className="precioPlanta">Precio: ${datos.precio}</h3>
+                          </div>
+                          <h2 className="consejos">Consejos</h2>
+                          <p className="consejosTexto" style={{marginTop:"0.5em"}}>{datos.consejos}</p>
+                          <br/>
+                          <div className="buscar-desc mt-5">
                             <div className="buscar text-left">
-                                <h4>Buscar Producto</h4>
                                 <div className="social-icons mt-4">
+                                  <h4 className="compartir">Compartir</h4>
                                     <ul>
-                                        <li><a href="#"><span className="fab fa-facebook"></span>Facebook</a></li>
-                                        <li><a href="#"><span className="fab fa-instagram"></span>Instagram</a></li>
-                                        <li><a href="#"><span className="fab fa-twitter"></span>Twitter</a></li>
+                                        <li><a href="#" className="social-icons">Facebook</a></li>
+                                        <li><a href="#" className="social-icons">Instagram</a></li>
+                                        <li><a href="#" className="social-icons">Twitter</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -29,10 +35,7 @@ const ItemDetail = ({datos}) => {
                     </div>
                 </div>
             </div>
-            <div className="row my-6">
-                <h5 className="shop-detail">{datos.description}</h5>
-            </div>
-        </div>
+</div>
         </>
     )}
 

@@ -8,11 +8,12 @@ import ItemDetailContainer from './container/ItemDetailContainer'
 import Footer from './container/Footer'
 
 function App() {
+  
   return (
     <BrowserRouter>
       <NavBar/>
       <Switch>
-      <Route path='/category/:id'>
+      <Route path="/category/:categoryId">
           <ItemListContainer/>
         </Route>
         <Route path='/item/:id'>
