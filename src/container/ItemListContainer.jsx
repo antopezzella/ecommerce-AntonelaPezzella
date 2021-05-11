@@ -21,7 +21,7 @@ export default function ItemListContainer() {
                   category: 'interior',
                   title: 'Calathea Orbifolia',
                   stockT: '4',
-                  precio: '4000'
+                  precio:'3000'
               },
               {
                   id: 2,
@@ -29,7 +29,7 @@ export default function ItemListContainer() {
                   category: 'interior',
                   title: 'Orquídea Duetto',
                   stockT: '3',
-                  precio: '5000'
+                  precio:'4000'
               },
               {
                   id: 3,
@@ -37,7 +37,7 @@ export default function ItemListContainer() {
                   category: 'interior',
                   title: 'Ficus Moclamen Trenzado',
                   stockT: '3',
-                  precio: '6000'
+                  precio:'4500'
               },
               {
                   id: 4,
@@ -45,7 +45,7 @@ export default function ItemListContainer() {
                   category: 'exterior',
                   title: 'Camelia Japónica',
                   stockT: '7',
-                  precio: '6000'
+                  precio:'3500'
               },
               {
                   id: 5,
@@ -53,7 +53,7 @@ export default function ItemListContainer() {
                   category: 'exterior',
                   title: 'Adelfa Roja (Nerium Oleander)',
                   stockT: '8',
-                  precio: '6000'
+                  precio:'2500'
               },
               {
                   id: 6,
@@ -61,7 +61,7 @@ export default function ItemListContainer() {
                   category: 'exterior',
                   title: 'Bambú De Exterior (Phyllostachys Bissetti)',
                   stockT: '9',
-                  precio: '6000'
+                  precio:'4000'
               },
           ]
           setTimeout(() => {

@@ -1,9 +1,8 @@
 import React from 'react';
-import ItemCount from './ItemCount'
 import { Link } from 'react-router-dom'
 import './item.css';
 
-const Item = ({id,imagen,title,stockT,precio,}) => {
+const Item = ({id,imagen,title,precio,}) => {
     
    return (
     <section className="container">
@@ -16,9 +15,7 @@ const Item = ({id,imagen,title,stockT,precio,}) => {
                  <div className="espacio-precio">
                    <span className="precio">${precio}</span>
                  </div>
-           <div>
-               <ItemCount id={id} stock={stockT}/>
-           </div>
+           
            <Link to={`/item/${id}`}><button className="btn-info">Ver Info</button></Link>
           </div>
           </div>

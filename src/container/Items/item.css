@@ -33,7 +33,7 @@
 }
 
 .consejos {
-    margin-top: 2em;
+    margin-top: 1.5em;
     font-family: "Merriweather", serif;
     color:#acbc9c;
     font-size: 1.3em;
@@ -47,7 +47,7 @@
 .social-icons {
     text-decoration: none; 
     color:grey;
-    font-size: 0.98em
+    font-size: 0.9em
 }
 .btn-stock {
     margin:auto;
@@ -73,12 +73,18 @@
 }
 
 .btn-shop {
+    margin-left:1.5em;
+    font-size: 0.8em;
+    background-color:#ce99b8;
+    border-radius: 2em;
     font-family: 'Open Sans';
-    color:black;
+    border-color: #acbc9c;
+    color:white;
     font-size: 0.8em;
 }
 
 .btn-info{
+    color:white;
     font-size: 0.8em;
     background-color:#ce99b8;
     border-radius: 2em;
@@ -119,9 +125,8 @@
 }
 
 .consejosTexto {
-        Line-height: 1.6em;
-        font-size: 0.86em;
-        margin: auto;
+        Line-height: 1.4em;
+        font-size: 0.84em;
         font-family: "Open Sans";
         color:grey;
 }

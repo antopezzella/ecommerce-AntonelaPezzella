@@ -1,8 +1,9 @@
 import React from 'react';
+import ItemCount from '../Items/ItemCount'
 import '../Items/item.css'
 
 
-const ItemDetail = ({datos}) => {
+const ItemDetail = ({datos, stockT, id}) => {
     return (
         <>
         <div key={datos.id} className="container py-md-5">
@@ -13,14 +14,15 @@ const ItemDetail = ({datos}) => {
                     </div>
                     <div className="desc1-derch col-md-6 pl-lg-3">
                         <h2 className="titulos-productos2">{datos.title}</h2>
-                          <p className="descripcion" style={{marginTop:"1em"}}>{datos.description}</p>
+                          <p className="descripcion" style={{marginTop:"0.5em"}}>{datos.description}</p>
                           <div style={{marginTop:"1em"}}>
                           <h3 className="precioPlanta">Precio: ${datos.precio}</h3>
                           </div>
+                          <div>
+                           <ItemCount id={datos.id} stock={datos.stockT}/>
+                          </div>
                           <h2 className="consejos">Consejos</h2>
-                          <p className="consejosTexto" style={{marginTop:"0.5em"}}>{datos.consejos}</p>
-                          <br/>
-                          <div className="buscar-desc mt-5">
+                          <p className="consejosTexto">{datos.consejos}</p>
                             <div className="buscar text-left">
                                 <div className="social-icons mt-4">
                                   <h4 className="compartir">Compartir</h4>
@@ -30,13 +32,12 @@ const ItemDetail = ({datos}) => {
                                         <li><a href="#" className="social-icons">Twitter</a></li>
                                     </ul>
                                 </div>
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-</div>
-        </>
-    )}
+      </div>
+  </>
+)}
 
 export default ItemDetail
