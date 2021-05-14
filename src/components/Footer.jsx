@@ -1,5 +1,4 @@
 import React from 'react';
-import LogoPlantasia from '../imagenes/plantasialogo.png';
 import './footer.css'
 
 export const Footer = () => {
@@ -7,7 +6,7 @@ export const Footer = () => {
     return (    
     <>
   <footer>
- <div class="container">
+    <hr></hr>
   <section class="ft-main">
     <div class="ft-main-item">
       <h2 class="ft-title">Sobre Nosotros</h2>
@@ -36,14 +35,15 @@ export const Footer = () => {
     </div>
   </section>
   <section class="ft-legal">
+  <div className="container" style={{margin:"auto"}}>
     <ul class="ft-legal-list">
-      <li><a href="#">Terminos &amp; Condiciones</a></li>
-      <li><a href="#">Política de privacidad</a></li>
+      <li><a class="ft" href="#">Terminos &amp; Condiciones</a></li>
+      <li><a class="ft" href="#">Política de privacidad</a></li>
       <li>&copy; 2021 Copyright Plantasia Inc.</li>
     </ul>
+    </div>
   </section>
-  </div>
-  </footer>
+</footer>
     </>
 )  
 }

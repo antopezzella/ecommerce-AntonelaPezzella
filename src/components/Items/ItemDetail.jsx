@@ -1,12 +1,12 @@
 import React from 'react';
-import ItemCount from '../Items/ItemCount'
-import '../Items/item.css'
+import ItemCountContainer from '../../container/ItemCountContainer'
+import './item.css'
 
 
-const ItemDetail = ({datos, stockT, id}) => {
+const ItemDetail = ({datos}) => {
     return (
         <>
-        <div key={datos.id} className="container py-md-5">
+        <div key={datos.id} className="container py-md-5"> 
             <div className="left-ads-display">
                 <div className="row">
                     <div className="desc1-izq col-md-6">
@@ -19,8 +19,9 @@ const ItemDetail = ({datos, stockT, id}) => {
                           <h3 className="precioPlanta">Precio: ${datos.precio}</h3>
                           </div>
                           <div>
-                           <ItemCount id={datos.id} stock={datos.stockT}/>
+                          <ItemCountContainer stock={datos.stock}/>
                           </div>
+                          <br/>
                           <h2 className="consejos">Consejos</h2>
                           <p className="consejosTexto">{datos.consejos}</p>
                             <div className="buscar text-left">
@@ -32,12 +33,15 @@ const ItemDetail = ({datos, stockT, id}) => {
                                         <li><a href="#" className="social-icons">Twitter</a></li>
                                     </ul>
                                 </div>
-                        </div>
+                            </div>
                     </div>
-                </div>
-            </div>
-      </div>
-  </>
+                <div className="contenedor">
+                  <img src={datos.imagen2} style={{width:"103%"}}/><img src={datos.imagen3} style={{width:"103%"}}/> 
+                </div> 
+        </div>
+    </div>
+</div>      
+</>
 )}
 
 export default ItemDetail
