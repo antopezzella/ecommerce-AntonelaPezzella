@@ -10,7 +10,7 @@ import '../components/Items/item.css';
 const ItemDetailContainer =() => {
     const [datos, setDatos] = useState({})
     const {id} = useParams ()
-   
+    const [added, setAdded] = useState(false);
     
     useEffect(() =>{
     const getItem = () => {
@@ -152,7 +152,7 @@ const ItemDetailContainer =() => {
         <>
         <div className="container" style={{margin:"auto"}}>
             <div className="row">
-             <ItemDetail datos={datos}/>
+             <ItemDetail datos={datos} added={added} setAdded={setAdded}/>
              </div>
         </div>
         </>

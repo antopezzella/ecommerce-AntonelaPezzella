@@ -3,7 +3,7 @@ import ItemCountContainer from '../../container/ItemCountContainer'
 import './item.css'
 
 
-const ItemDetail = ({datos}) => {
+const ItemDetail = ({datos, added, setAdded}) => {
     return (
         <>
         <div key={datos.id} className="container py-md-5"> 
@@ -19,7 +19,7 @@ const ItemDetail = ({datos}) => {
                           <h3 className="precioPlanta">Precio: ${datos.precio}</h3>
                           </div>
                           <div>
-                          <ItemCountContainer stock={datos.stock}/>
+                          <ItemCountContainer id={datos.id} stock={datos.stock} datos={datos} added={added} setAdded={setAdded}/>
                           </div>
                           <br/>
                           <h2 className="consejos">Consejos</h2>

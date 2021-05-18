@@ -20,7 +20,7 @@ export const NavBar = () => {
           <NavLink to={'/contacto'}  style={{color: 'grey', marginRight:'2em', fontSize:"0.96em"}}>Contacto</NavLink>
         </Nav>
         <Nav>
-          <Nav.Link><CartWidget/></Nav.Link>
+          <Nav.Link to={`/carrito`}><CartWidget/></Nav.Link>
         </Nav>
           </Navbar.Collapse>
          </Container>

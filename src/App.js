@@ -1,18 +1,18 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
-import { NavBar } from './components/NavBar/NavBar';
-import ItemListContainer from './container/ItemListContainer';
 import  { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { NavBar } from './components/NavBar/NavBar';
 import ItemDetailContainer from './container/ItemDetailContainer'
+import ItemListContainer from './container/ItemListContainer';
+import CartListContainer from './container/CartListContainer'
 import Footer from './components/Footer'
-import { CartProvider } from './context/cartContext'
-import Cart from './components/Cart/Cart';
+import { ShoppingCart } from './context/cartContext'
 import Contacto from './components/Contacto'
 
 function App() {
   return (
-  <CartProvider>
+  <ShoppingCart>
     <BrowserRouter>
         <NavBar/>
       <Switch>
@@ -25,8 +25,8 @@ function App() {
       <Route path='/contacto'>
         <Contacto/>
       </Route>
-      <Route exact path='/Cart'>
-        <Cart/>
+      <Route path='/carrito'>
+        <CartListContainer/>
       </Route>
       <Route path='/'>
         <ItemListContainer/>
@@ -34,7 +34,7 @@ function App() {
       </Switch>
         <Footer/>
     </BrowserRouter>
-  </CartProvider>
+  </ShoppingCart>
   );
 }
 
