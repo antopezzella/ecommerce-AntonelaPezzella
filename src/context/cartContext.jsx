@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
-
+import React, { useState, useContext } from 'react'
 export const CartContext = React.createContext([]);
+export const useCartContext = () => useContext(CartContext);
 
 export const ShoppingCart = ({children}) => {
 
@@ -16,7 +16,6 @@ export const ShoppingCart = ({children}) => {
     return false
   }
 
-
   const addQuant = (item, quant) => {
 
     const filter = [...cartItems]
@@ -31,8 +30,8 @@ export const ShoppingCart = ({children}) => {
   }
 
 
-  const addItem = (item, quant) => {
-
+ const addItem =  (item, quant)=> {
+   console.log(item, quant)
     if (isInCart(item.id)) {
       addQuant(item, quant)
       console.log(item)
@@ -67,8 +66,5 @@ export const ShoppingCart = ({children}) => {
   )
 }
 
-export const useShoppingCart = () => {
-  return React.useContext(CartContext)
-}
 
 // en el contexto tengo que almacenar cuantos items tengo elegidos y esa info la consumo desde el item y desde el item detail

@@ -1,23 +1,20 @@
 import React from 'react'
 import { CartList } from '../components/Cart/CartList.jsx'
-import { useShoppingCart } from '../context/cartContext'
+import { useCartContext } from '../context/cartContext'
 import { Spinner } from 'react-bootstrap'
 import '../components/Cart/cart.css'
 import whatsapp from '../imagenes/whatsapp.svg'
 
 const CartListContainer = () => {
-
-  const { cartItems, clearItems } = useShoppingCart(); 
-
+  const {items, clearItems} = useCartContext();
 
   const totalPrice = (price, qty) => {
     const totalPrice = price * qty;
     return totalPrice
   }
 
-
   const finalPrice = () => {
-    const filter = [...cartItems];
+    const filter = [...items];
     let price = 0;
     filter.forEach (i => {
       price = price + i.price * i.qty;
@@ -25,14 +22,13 @@ const CartListContainer = () => {
     return price;
   }
   
-
   return ( 
     <>
       <div className="container-fluid">
         <div className="row justify-content-center">
           <h1 className="title d-flex justify-content-center col-lg-12 col-md-12 col-xs-12 col-12">TU CARRITO DE COMPRAS</h1>
           <div className="d-flex justify-content-center col-lg-12 col-md-12 col-xs-12 col-12">
-            {cartItems ? <CartList cartItems={cartItems} clearItems={clearItems} finalPrice={finalPrice()} totalPrice={totalPrice}/> : <Spinner className="spinner" animation="border" variant="success" />}
+            {items ? <CartList cartItems={items} clearItems={clearItems} finalPrice={finalPrice()} totalPrice={totalPrice}/> : <Spinner className="spinner" animation="border" variant="success"/>}
           </div>
         </div>
         <div className="row fixed d-flex justify-content-end btn-whatsapp">

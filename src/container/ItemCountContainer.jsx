@@ -2,8 +2,9 @@ import React, { useState , useEffect} from 'react'
 import ItemCount from '../components/Items/ItemCount'
 import '../components/Items/item.css'
 
-const ItemCountContainer = ({stock}) => {
-  const [stockTotal, setStockTotal] = useState(stock)
+const ItemCountContainer = ({onAdd, datos}) => {
+  console.log(datos)
+  const [stockTotal, setStockTotal] = useState(datos.stock)
   const [unitsToBuy, setUnitsToBuy] = useState(1)
   const [status, setStatus] = useState()
 
@@ -19,10 +20,6 @@ const ItemCountContainer = ({stock}) => {
       setUnitsToBuy(unitsToBuy - 1)
       setStockTotal(stockTotal + 1)
     } 
-  }
-
-  const onAdd = () => {
-    alert(`Has agregado ${unitsToBuy} unidades al carrito`)
   }
 
   useEffect(() => {

@@ -5,12 +5,16 @@ import Foto1 from '../imagenes/orquideavanda.jpg'
 import TextoI from '../imagenes/interior.png';
 import Texto2 from '../imagenes/exterior.png';
 import '../components/Items/item.css';
-
+import ItemCountContainer from './ItemCountContainer'
+import { useCartContext } from '../context/cartContext'
+import {Link} from "react-router-dom"
+import { Spinner } from 'react-bootstrap'
 
 const ItemDetailContainer =() => {
     const [datos, setDatos] = useState({})
     const {id} = useParams ()
-    const [added, setAdded] = useState(false);
+    const [added, setAdded] = useState(true);
+    const { cartItems, addItem } = useCartContext();
     
     useEffect(() =>{
     const getItem = () => {
@@ -144,15 +148,21 @@ const ItemDetailContainer =() => {
               getItem().then(dato => {
                 const itemFilter = dato.filter(item => `${item.id}` === id)
                 console.log(itemFilter)
-                setDatos(itemFilter[0])})
+                setDatos(itemFilter)})
             },[])
 
+            const onAdd = (quant) => {
+                addItem(datos[0], quant)
+                setAdded (!added)
+              }
            
+        
     return (
         <>
         <div className="container" style={{margin:"auto"}}>
             <div className="row">
-             <ItemDetail datos={datos} added={added} setAdded={setAdded}/>
+             {datos.length > 0 ? <ItemDetail datos={datos[0]}/> : <Spinner className="spinner" animation="border" variant="success"/>}
+             { added ? datos.length > 0 ? <ItemCountContainer datos={datos[0]} added={added} onAdd={onAdd}/> : <Spinner className="spinner" animation="border" variant="success"/> : <Link to={'/carrito'}><button className="btn-shop">Terminar compra</button></Link>}
              </div>
         </div>
         </>
