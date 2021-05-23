@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom'
 import './item.css';
 
-const Item = ({id,imagen,title,precio,}) => {
+const Item = ({id,imagen,title,precio}) => {
     
    return (
     <div className="container" style={{margin:"auto"}}>

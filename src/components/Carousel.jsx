@@ -1,8 +1,9 @@
 import { React, useState } from 'react'
+import './Items/item.css'
 import { Carousel } from 'react-bootstrap'
-import FirstSlide from '../imagenes/orquideavanda.jpg'
-import SecondSlide from '../imagenes/orquideavanda.jpg'
-import ThirdSlide from '../imagenes/orquideavanda.jpg'
+import FirstSlide from '../imagenes/orquideamultiflora.jpg'
+import SecondSlide from '../imagenes/ficuslyrata.jpg'
+import ThirdSlide from '../imagenes/calatheaorbifolia.jpg'
 
 
 function ControlledCarousel() {
@@ -21,8 +22,8 @@ function ControlledCarousel() {
       alt="First slide"
     />
     <Carousel.Caption>
-      <h3>First slide label</h3>
-      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+      <h3 className="carouselTitle">Orquídea Multiflora Morada</h3>
+      <p className="carouselText">¡Ideal si lo que buscas son muchas flores en una misma planta!</p>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
@@ -32,8 +33,8 @@ function ControlledCarousel() {
       alt="Second slide"
     />
     <Carousel.Caption>
-      <h3>Second slide label</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <h3 className="carouselTitle">Ficus Lyrata</h3>
+      <p className="carouselText">Sin duda, las hojas son su gran atractivo.</p>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
@@ -43,8 +44,8 @@ function ControlledCarousel() {
       alt="Third slide"
     />
     <Carousel.Caption>
-      <h3>Third slide label</h3>
-      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+      <h3 className="carouselTitle">Calathea Orbifolia</h3>
+      <p className="carouselText">¡Su estampado en todos verdes te asombrarán!</p>
     </Carousel.Caption>
   </Carousel.Item>
 </Carousel>

@@ -14,7 +14,7 @@ export const NavBar = () => {
          <Navbar.Toggle aria-controls="basic-navbar-nav" />
          <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto" style={{marginLeft:"2em", fontFamily: "Open Sans"}}>
-          <NavLink to="/index" style={{color: 'grey', marginRight:'2em', fontSize:"0.96em"}}>Home</NavLink>
+          <NavLink to="/index" style={{color: 'grey', marginRight:'2em', fontSize:"0.96em"}}>Inicio</NavLink>
           <NavLink to="/category/interior" style={{color: 'grey', marginRight:'2em', fontSize:"0.96em"}}>Plantas de interior</NavLink>
           <NavLink to="/category/exterior" style={{color: 'grey', marginRight:'2em', fontSize:"0.96em"}}>Plantas de exterior</NavLink>
           <NavLink to={'/contacto'}  style={{color: 'grey', marginRight:'2em', fontSize:"0.96em"}}>Contacto</NavLink>

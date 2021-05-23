@@ -6,7 +6,7 @@ import '../components/Cart/cart.css'
 import whatsapp from '../imagenes/whatsapp.svg'
 
 const CartListContainer = () => {
-  const {items, clearItems} = useCartContext();
+  const {cartItems, clearItems} = useCartContext();
 
   const totalPrice = (price, qty) => {
     const totalPrice = price * qty;
@@ -14,7 +14,7 @@ const CartListContainer = () => {
   }
 
   const finalPrice = () => {
-    const filter = [...items];
+    const filter = [...cartItems];
     let price = 0;
     filter.forEach (i => {
       price = price + i.price * i.qty;
@@ -26,9 +26,9 @@ const CartListContainer = () => {
     <>
       <div className="container-fluid">
         <div className="row justify-content-center">
-          <h1 className="title d-flex justify-content-center col-lg-12 col-md-12 col-xs-12 col-12">TU CARRITO DE COMPRAS</h1>
+          <h2 className="title d-flex justify-content-center col-lg-12 col-md-12 col-xs-12 col-12">Plantas en tu carrito</h2>
           <div className="d-flex justify-content-center col-lg-12 col-md-12 col-xs-12 col-12">
-            {items ? <CartList cartItems={items} clearItems={clearItems} finalPrice={finalPrice()} totalPrice={totalPrice}/> : <Spinner className="spinner" animation="border" variant="success"/>}
+            {cartItems ? <CartList cartItems={cartItems} clearItems={clearItems} finalPrice={finalPrice()} totalPrice={totalPrice}/> : <Spinner className="spinner" animation="border" variant="success"/>}
           </div>
         </div>
         <div className="row fixed d-flex justify-content-end btn-whatsapp">

@@ -165,3 +165,12 @@
     align-items: center;
   }
 
+.carouselTitle {
+    color:#ce99b8;
+    font-family: "Merriweather", serif;
+}
+
+.carouselText{
+    color:grey;
+    font-family: "Open Sans";
+}

@@ -1,8 +1,9 @@
 import React from 'react';
+import ItemCountContainer from '../../container/ItemCountContainer'
 import './item.css'
 
-const ItemDetail = ({datos}) => {
-    console.log(datos.imagen)
+const ItemDetail = ({datos, onAdd}) => {
+    
     return (
         <>
         <div key={datos.id} className="container py-md-5"> 
@@ -14,9 +15,10 @@ const ItemDetail = ({datos}) => {
                     <div className="desc1-derch col-md-6 pl-lg-3">
                         <h2 className="titulos-productos2">{datos.title}</h2>
                           <p className="descripcion" style={{marginTop:"0.5em"}}>{datos.description}</p>
-                          <div style={{marginTop:"1em"}}>
+                          <div style={{marginTop:"1em", marginBottom:"1em"}}>
                           <h3 className="precioPlanta">Precio: ${datos.precio}</h3>
                           </div>
+                            <ItemCountContainer datos={datos} onAdd={onAdd} />
                           <br/>
                           <h2 className="consejos">Consejos</h2>
                           <p className="consejosTexto">{datos.consejos}</p>
@@ -32,7 +34,7 @@ const ItemDetail = ({datos}) => {
                             </div>
                     </div>
                 <div className="contenedor">
-                  <img src={datos.imagen2} style={{width:"103%"}}/><img src={datos.imagen3} style={{width:"103%"}}/> 
+                  <img src={datos.imagen2} style={{width:"105%"}}/><img src={datos.imagen3} style={{width:"105%"}}/> 
                 </div> 
         </div>
     </div>

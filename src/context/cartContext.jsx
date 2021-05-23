@@ -17,7 +17,6 @@ export const ShoppingCart = ({children}) => {
   }
 
   const addQuant = (item, quant) => {
-
     const filter = [...cartItems]
     filter.forEach (i => {
       if(i.id === item.id) {
@@ -25,28 +24,20 @@ export const ShoppingCart = ({children}) => {
         i.qty = i.qty + quant
       }
     })
-
     setCartItems(filter)
   }
 
-
  const addItem =  (item, quant)=> {
-   console.log(item, quant)
     if (isInCart(item.id)) {
       addQuant(item, quant)
-      console.log(item)
-
     } else {
       setCartItems([...cartItems, {...item, qty: quant}])
     }
   }
-  console.log(cartItems)
 
   const removeItems = (item) => {
-    console.log(item)
     const newItem = cartItems.filter(x=> x.id !== item)
     setCartItems(newItem)
-    console.log('Item eliminado')
   }
 
   const clearItems = () => setCartItems([])
@@ -65,6 +56,3 @@ export const ShoppingCart = ({children}) => {
     </CartContext.Provider>
   )
 }
-
-
-// en el contexto tengo que almacenar cuantos items tengo elegidos y esa info la consumo desde el item y desde el item detail

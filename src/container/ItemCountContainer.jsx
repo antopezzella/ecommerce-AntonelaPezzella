@@ -1,9 +1,9 @@
 import React, { useState , useEffect} from 'react'
 import ItemCount from '../components/Items/ItemCount'
 import '../components/Items/item.css'
+import { Link } from "react-router-dom"
 
 const ItemCountContainer = ({onAdd, datos}) => {
-  console.log(datos)
   const [stockTotal, setStockTotal] = useState(datos.stock)
   const [unitsToBuy, setUnitsToBuy] = useState(1)
   const [status, setStatus] = useState()
@@ -31,7 +31,15 @@ const ItemCountContainer = ({onAdd, datos}) => {
 
   return (
     <>
-      <ItemCount stockTotal={stockTotal} unitsToBuy={unitsToBuy} sumar={sumar} restar={restar} onAdd={onAdd} status={status}/>
+      <ItemCount 
+        stockTotal={stockTotal} 
+        unitsToBuy={unitsToBuy} 
+        sumar={sumar}
+        restar={restar}
+        onAdd={onAdd} 
+        status={status}
+      />
+      <Link to={'/carrito'}><button className="btn-shop">Terminar compra</button></Link>
     </>
   )
 }

@@ -3,112 +3,35 @@ import ItemList from '../components/Items/ItemList';
 import { useParams } from 'react-router-dom';
 import Banner from '../imagenes/plantasiabanner.png'
 import Banner2 from '../imagenes/enviosbanner.png'
-import Foto1 from '../imagenes/orquideavanda.jpg'
 import '../components/Items/item.css';
 import Carousel from '../components/Carousel'
+import { getFirestore } from '../firebase/firebase'
 
 export default function ItemListContainer() {
-
     const [ datos, setDatos ] = useState([]);
     const { categoryId } = useParams()
+    const [notFound, setNotFound] = useState(false);
     
     useEffect(() => {
-      new Promise((resolve, reject) => {
-          const catalogo = [
-              {
-                  id: 1,
-                  imagen:Foto1,
-                  category: 'interior',
-                  title: 'Calathea Orbifolia',
-                  precio:'3000'
-              },
-              {
-                  id: 2,
-                  imagen: Foto1,
-                  category: 'interior',
-                  title: 'Orquídea Duetto',
-                  precio:'4000'
-              },
-              {
-                  id: 3,
-                  imagen: Foto1,
-                  category: 'interior',
-                  title: 'Ficus Moclamen Trenzado',
-                  precio:'4500'
-              },
-              {  
-                  id:4,
-                  imagen: Foto1,
-                  category:'interior',
-                  title:'Orquídea Multiflora Morada',
-                  precio:'3000',
-              },
-              {  
-                  id:5,
-                  imagen: Foto1,
-                  category:'interior',
-                  title:'Crotón Codiaedum Iceton',
-                  precio:'4000',
-              },
-              {  
-                 id:6,
-                 imagen: Foto1,
-                 category:'interior',
-                 title:'Ficus Lyrata',
-                 precio:'4500',
-              },
-              { 
-                 id: 7,
-                 imagen: Foto1,
-                 category: 'exterior',
-                 title: 'Camelia Japónica',
-                 precio:'3500'
-              },
-              {
-                  id: 8,
-                  imagen: Foto1,
-                  category: 'exterior',
-                  title: 'Adelfa Roja (Nerium Oleander)',
-                  precio:'2500'
-              },
-              {
-                  id: 9,
-                  imagen:  Foto1,
-                  category: 'exterior',
-                  title: 'Bambú De Exterior (Phyllostachys Bissetti)',
-                  precio:'4000'
-              },
-              {
-                id:10,
-                imagen:Foto1,
-                category:'exterior',
-                title:'Photinia Fraseri Red Robin',
-                precio:'3500',
-              },
-              { 
-                id:11,
-                imagen:Foto1,
-                category:'exterior',
-                title:'Cyca Revoluta',
-                precio:'2500',
-              },
-              {
-                id:12,
-                imagen:Foto1,
-                category:'exterior',
-                title:'Dipladenia Espaldera',
-                precio:'4000',
-              },
-          ]
-          setTimeout(() => {
-              if (categoryId) {
-                  resolve(catalogo.filter(c => c.category === categoryId));
-              } else {
-                  resolve(catalogo);
-              }
-          }, 2000);
-      }).then((res) => {
-          setDatos(res)
+        const db = getFirestore();
+        let filterCollection = '';
+          if(categoryId){
+            filterCollection = db.collection("Items").where('category','==', categoryId);
+          } else {
+            filterCollection = db.collection("Items");
+          }
+          filterCollection.get().then((res)=>{
+            const documentos = res.docs.map((doc)=>{
+              if(!doc.exists) {
+                setNotFound(true)
+            }
+              return {
+                id: doc.id,
+                ...doc.data()
+              }}
+              );
+              
+        setDatos(documentos)
       }).catch(() => {
           console.log("No se puede cargar la página")
       })

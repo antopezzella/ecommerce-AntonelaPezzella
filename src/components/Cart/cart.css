@@ -1,22 +1,14 @@
 .shopping-bg {
-    background-color: white;
     border-radius: 10px;
     padding:20px;
     margin:15px 0;
-  }
-  
-  .button {
-    font-size: 13px;
-    margin: 0 10px;
-  }
-  
-  .vaciar {
-    font-size: 13px;
-    margin: 10px;
-    background-color: rgb(92, 92, 92);
   }
   
   .whatsapp {
     height: 50px;
     margin-bottom:20px;
   }
+
+.texto {
+  font-family: 'Open Sans';
+}
