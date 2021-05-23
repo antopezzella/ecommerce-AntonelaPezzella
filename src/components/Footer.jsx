@@ -27,7 +27,7 @@ export const Footer = () => {
     </div>
     <div className="ft-main-item">
       <h2 className="ft-title">Newsletter</h2>
-      <p className="suscribite">¡Subscrite al newsletter y recibí todas las novedades!</p>
+      <p className="suscribite">¡Subscribite al newsletter y recibí todas las novedades!</p>
       <form>
         <input type="email" name="email" placeholder="Email"/>
         <input type="submit" value="Suscribirse"/>

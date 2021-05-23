@@ -32,7 +32,7 @@ const CartListContainer = () => {
           </div>
         </div>
         <div className="row fixed d-flex justify-content-end btn-whatsapp">
-            <a className="col-xl-1 col-md-1 col-sm-2 col-3" href="https://api.whatsapp.com/send?phone=541167958390" target="_blank">
+            <a className="col-xl-1 col-md-1 col-sm-2 col-3" href="https://api.whatsapp.com/send?phone=541153796304" target="_blank">
               <img className="whatsapp" src={whatsapp} alt="whatsapp"/>
             </a>
           </div>
