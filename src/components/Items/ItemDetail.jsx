@@ -13,7 +13,7 @@ const ItemDetail = ({datos, onAdd}) => {
                         <img src={datos.imagen} className="img-fluid" />
                     </div>
                     <div className="desc1-derch col-md-6 pl-lg-3">
-                        <h2 className="titulos-productos2">{datos.title} - {datos.codigo}</h2>
+                        <h2 className="titulos-productos2">{datos.title}</h2>
                           <p className="descripcion" style={{marginTop:"0.5em"}}>{datos.description}</p>
                           <div style={{marginTop:"1em", marginBottom:"1em"}}>
                           <h3 className="precioPlanta">Precio: ${datos.precio}</h3>

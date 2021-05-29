@@ -30,7 +30,7 @@ export const Footer = () => {
       <p className="suscribite">¡Subscribite al newsletter y recibí todas las novedades!</p>
       <form>
         <input type="email" name="email" placeholder="Email"/>
-        <input type="submit" value="Suscribirse"/>
+        <input type="submit" className="btn" value="Suscribirse"/>
       </form>
     </div>
   </section>

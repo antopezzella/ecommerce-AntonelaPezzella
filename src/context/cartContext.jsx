@@ -50,6 +50,7 @@ export const ShoppingCart = ({children}) => {
     return units;
   }
 
+  
   return (
     <CartContext.Provider value={{ cartItems, clearItems, addItem, removeItems, getUnits, empty }}>
       {children}

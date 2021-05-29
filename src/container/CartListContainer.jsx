@@ -21,7 +21,7 @@ const CartListContainer = () => {
     })
     return price;
   }
-  
+
   return ( 
     <>
       <div className="container-fluid">

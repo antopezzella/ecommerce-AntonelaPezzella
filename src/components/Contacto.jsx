@@ -1,51 +1,34 @@
-import './contacto.css'
-import React, {Fragment, useState} from 'react';
+import React from 'react';
+import emailjs from 'emailjs-com';
+import './contactUs.css'
 
-const Contacto = () => {
+export default function ContactUs() {
 
-    const [datos, setDatos] = useState({
-        nombre: '',
-        apellido: ''
-    })
+  function sendEmail(e) {
+    e.preventDefault();
 
-    const handleInputChange = (event) => {
-        setDatos({
-            ...datos,
-            [event.target.name] : event.target.value
-        })
-    }
+    emailjs.sendForm('Plantasia', 'template_3y4e3jo', e.target, 'user_V094VAf60LccRlfHozDeK')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+  }
 
-    const enviarDatos = (event) => {
-        event.preventDefault()
-        console.log('enviando datos...' + datos.nombre + ' ' + datos.apellido)
-    }
-
-    return (
-        <Fragment>
-            <div className="container">
-            <h3 className="formTitle">Formulario</h3>
-            <form className="row" onSubmit={enviarDatos}>
-                <div className="col-md-3">
-                    <input type="text" placeholder="Nombre" className="form-control" onChange={handleInputChange} name="nombre"></input>
-                </div>
-                <div className="col-md-3">
-                    <input type="text" placeholder="Apellido" className="form-control" onChange={handleInputChange} name="apellido"></input>
-                </div>
-                <div className="form-group">
-                    <input type="email" name="email" className="form-control"  onChange={handleInputChange} placeholder="email" required/>
-                </div>
-                <div className="form-group">
-                    <textarea name="mensaje" className="form-control" onChange={handleInputChange} placeholder="Ingresá tu mensaje"></textarea>
-                </div>
-                <button type="submit" className="btn btn-primary">Enviar</button>
-            </form>
-            <ul>
-                <li>{datos.nombre}</li>
-                <li>{datos.apellido}</li>
-            </ul>
-            </div>
-        </Fragment>
-    );
+  return (
+  <section className="contenedor-formulario">
+      <h2 className="titleContacto">¡Estamos para ayudarte!</h2>
+      <p className="texto">Escribinos tu consulta:</p>
+    <form className="contact-form" onSubmit={sendEmail}>
+      <input type="hidden" name="contact_number" />
+      <label className="texto2">Nombre y apellido</label>
+      <input type="text" name="user_name" />
+      <label className="texto2">Email</label>
+      <input type="email" name="user_email" />
+      <label className="texto2">Mensaje</label>
+      <textarea name="message" />
+      <input type="submit" value="Send" className="btn-enviar-form"/>
+    </form>
+  </section>
+  );
 }
- 
-export default Contacto;

@@ -1,0 +1,65 @@
+.contenedor-formulario{
+	margin-top: 4em;
+}
+.contenedor-formulario form{
+    font-family: "Open Sans";
+	width:36em;
+	margin:auto;
+	padding:1.5em 6em 2em 6em;
+	display:flex;
+	flex-direction: column;
+	border-radius: 5px;
+    border-color: #acbc9c;
+	margin-top:1em;
+	margin-bottom:3em;
+	background: white;
+	box-shadow: 1px 4px 18px -4px grey;
+}
+
+.contenedor-formulario form input{
+    border-color: #acbc9c;
+	padding:10px;
+	border-bottom: 1px solid lightgrey;
+}
+
+.contenedor-formulario form textarea{
+	margin-top:1em;
+	border:1px solid grey;
+	border-radius: 5px;
+    border-color: #acbc9c;
+	padding:10px;
+	font-size:14px;
+}
+
+.contenedor-formulario form label{
+	margin-top:10px;
+	margin-bottom:10px;
+}
+.btn-enviar-form{
+    border-radius: 2em;
+	width:8em!important;
+	padding:10px!important;
+	margin:auto;
+	background: lightgrey;
+	margin-top:2em;
+	color:white!important;
+	font-size: 14px;
+}
+  
+.titleContacto {
+    margin-bottom:0.7em;
+    text-align: center;
+    color:#acbc9c;
+    font-family: "Merriweather", serif;
+}
+
+.texto {
+    margin-bottom:1.2em;
+    text-align: center;
+    font-family: "Open Sans";
+}
+
+.texto2 {
+	font-family: "Open Sans";
+	font-size: 0.89em
+}
