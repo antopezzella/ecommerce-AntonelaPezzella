@@ -26,7 +26,7 @@ export const CartList = ({cartItems, totalPrice, clearItems, finalPrice}) => {
         <hr style={{display: !cartItems.length ? "none" : "block"}}/>
         <div className="container" style={{textAlign:"center", margin:"auto"}}>
             <button className="btn-shop col-lg-5 col-md-5 col-xs-5 col-11" onClick={clearItems} style={{display: !cartItems.length && "none", width:"15%"}}>Vaciar carrito</button>
-            <Link to={'/'}><button className="btn-shop col-lg-5 col-md-5 col-xs-5 col-11" style={{display: !cartItems.length && "none", width:"15%"}}>Finalizar compra</button></Link>
+            <Link to={'/CheckOutContainer'}><button className="btn-shop col-lg-5 col-md-5 col-xs-5 col-11" style={{display: !cartItems.length && "none", width:"15%"}}>Finalizar compra</button></Link>
         </div>
       </div>
     </>

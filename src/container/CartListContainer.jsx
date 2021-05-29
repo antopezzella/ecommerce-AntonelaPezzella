@@ -28,7 +28,9 @@ const CartListContainer = () => {
         <div className="row justify-content-center">
           <h2 className="title d-flex justify-content-center col-lg-12 col-md-12 col-xs-12 col-12">Plantas en tu carrito</h2>
           <div className="d-flex justify-content-center col-lg-12 col-md-12 col-xs-12 col-12">
-            {cartItems ? <CartList cartItems={cartItems} clearItems={clearItems} finalPrice={finalPrice()} totalPrice={totalPrice}/> : <Spinner className="spinner" animation="border" variant="success"/>}
+            {cartItems ? 
+              <CartList cartItems={cartItems} clearItems={clearItems} finalPrice={finalPrice()} totalPrice={totalPrice}/> 
+            : <Spinner className="spinner" animation="border" variant="success"/>}
           </div>
         </div>
         <div className="row fixed d-flex justify-content-end btn-whatsapp">

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Form, Row, Col, Button } from 'react-bootstrap';
-import { useCartContext } from '../../context/cartContext';
-import { getFirestore } from '../../firebase/firebase';
+import { useCartContext } from '../context/cartContext';
+import { getFirestore } from '../firebase/firebase';
 import firebase from 'firebase/app'
 
 
@@ -67,12 +67,12 @@ export const CheckOutContainer = ({ finalPrice }) => {
             <Form.Group as={Col} md="6" controlId="validationCustom01">
               <Form.Label>Nombre</Form.Label>
               <Form.Control required type="text" placeholder="Nombre" name="Nombre"/>
-              <Form.Control.Feedback>ok!</Form.Control.Feedback>
+              <Form.Control.Feedback>Válido</Form.Control.Feedback>
             </Form.Group>
             <Form.Group as={Col} md="6" controlId="validationCustom02">
               <Form.Label>Apellido</Form.Label>
               <Form.Control required type="text" placeholder="Apellido" name="Apellido"/>
-              <Form.Control.Feedback>ok!</Form.Control.Feedback>
+              <Form.Control.Feedback>Válido</Form.Control.Feedback>
             </Form.Group>
           </Row>
           <Row className="mb-2">
@@ -85,11 +85,11 @@ export const CheckOutContainer = ({ finalPrice }) => {
             <Form.Group as={Col} md="6" controlId="validationCustom02">
               <Form.Label>Teléfono</Form.Label>
               <Form.Control required type="tel" placeholder="+54..." pattern='^\+?\d{0,13}' name="teléfono"/>
-              <Form.Control.Feedback>ok!</Form.Control.Feedback>
+              <Form.Control.Feedback>Válido</Form.Control.Feedback>
               <Form.Control.Feedback type="invalid">Ingrese un teléfono válido</Form.Control.Feedback>
             </Form.Group>
           </Row>
-          <Button type="submit" onClick={onSubmit}>Enviar información</Button>
+          <Button type="submit" onClick={onSubmit}>Enviar</Button>
         </Form>
       </>
       }
