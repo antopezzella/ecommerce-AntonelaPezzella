@@ -1,4 +1,5 @@
 import React from 'react'
+import CheckOutContainer from '../../container/CheckOutContainer'
 import { CartItem } from './CartItem'
 import { Link } from 'react-router-dom' 
 import './cart.css'
