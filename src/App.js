@@ -9,6 +9,8 @@ import CartListContainer from './container/CartListContainer'
 import Footer from './components/Footer'
 import { ShoppingCart } from './context/cartContext'
 import Contacto from './components/Contacto'
+import { CheckOutContainer } from './container/CheckOutContainer'
+
 
 function App() {
   return (
@@ -30,6 +32,9 @@ function App() {
       </Route>
       <Route path='/'>
         <ItemListContainer/>
+      </Route>
+      <Route path='/CheckOutContainer'>
+        <CheckOutContainer/>
       </Route>
       </Switch>
         <Footer/>
