@@ -6,10 +6,12 @@ import { NavBar } from './components/NavBar/NavBar';
 import ItemDetailContainer from './container/ItemDetailContainer'
 import ItemListContainer from './container/ItemListContainer';
 import CartListContainer from './container/CartListContainer'
+import MyOrder from './components/Orders/UserOrders'
+import { CheckOutContainer } from './container/CheckOutContainer'
 import Footer from './components/Footer'
 import { ShoppingCart } from './context/cartContext'
 import Contacto from './components/Contacto'
-import { CheckOutContainer } from './container/CheckOutContainer'
+
 
 
 function App() {
@@ -18,6 +20,9 @@ function App() {
     <BrowserRouter>
         <NavBar/>
       <Switch>
+      <Route exact path='/order/:id'>
+        <MyOrder/>
+      </Route>
       <Route path="/category/:categoryId">
         <ItemListContainer/>
       </Route>

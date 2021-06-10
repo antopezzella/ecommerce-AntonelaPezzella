@@ -49,8 +49,11 @@ export const CheckOutContainer = ({ finalPrice }) => {
         setBuyer({});
         clearItems();
       });
+
+      
   };
 
+  
   return (
     <>
       {id.length ? 
