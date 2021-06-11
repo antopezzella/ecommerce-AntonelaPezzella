@@ -8,12 +8,12 @@
 <h1 id="librerías-descargadas">Librerías descargadas</h1>
 <p><strong>Plantasia</strong> es una app realizada a partir de React Js, la lógica de los componentes está escrita en JavaScript para crear interfaces de usuario.</p>
 <h2 id="hooks-implementados">Hooks implementados</h2>
-<p><em>Un Hook es una función especial que permite “conectarse” a características de React.</em><br>
-⚡️ <strong>useState</strong> te permite añadir el estado de React a un componente de función.<br>
+<p><em>Un Hook es una función especial que permite “conectarse” a características de React.</em></p>
+<p>⚡️ <strong>useState</strong> te permite añadir el estado de React a un componente de función.<br>
 ⚡️ <strong>useEffect</strong> te permite llevar a cabo efectos secundarios en componentes funcionales.<br>
 ⚡️ <strong>useContext</strong> te permite suscribirte al contexto React sin introducir el anidamiento.</p>
 <h1 id="instalación">Instalación</h1>
-<p>Para instalar esta app y ejecutarla deberá seguir estos pasos</p>
+<p>Para instalar esta app y ejecutarla deberás seguir estos pasos</p>
 <ol>
 <li>Clonar este repositorio “git clone <a href="https://github.com/antopezzella/ecommerce-Plantasia.git">https://github.com/antopezzella/ecommerce-Plantasia.git</a>”</li>
 <li>Deberás ingresar el siguiente comando en tu consola “npm install” para instalar “node modules”.</li>
