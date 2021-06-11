@@ -10,8 +10,8 @@
 <p><em>Un Hook es una función especial que permite “conectarse” a características de React.</em></p>
 <p>⚡️ <strong>useState</strong> te permite añadir el estado de React a un componente de función.<br>
 ⚡️ <strong>useEffect</strong> te permite llevar a cabo efectos secundarios en componentes funcionales.<br>
-⚡️ <strong>useContext</strong> te permite suscribirte al contexto React sin introducir el anidamiento.</p>
-⚡️ <strong>useParams</strong>te permite detectar el parametro que le indicamos por la URL.
+⚡️ <strong>useContext</strong> te permite suscribirte al contexto React sin introducir el anidamiento.<br>
+⚡️ <strong>useParams</strong>te permite detectar el parametro que le indicamos por la URL.</p>
 <h2 id="instalación">Instalación</h2>
 <p>Para instalar esta app y ejecutarla deberás seguir estos pasos</p>
 <ol>
@@ -24,7 +24,8 @@
 <p><strong>Email-Js</strong>: Permite enviar por email un formulario de contacto y recibir una respuesta.<br>
 <strong>Firebase</strong><br>
 <strong>React-Router-Dom</strong><br>
-<strong>React Bootstrap</strong></p>
+<strong>React Bootstrap</strong><br>
+<strong>React Spinner</strong></p>
 <h2 id="rutas">Rutas</h2>
 
 <table>
