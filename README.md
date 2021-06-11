@@ -1,7 +1,3 @@
----
-
-
----
 
 <h1 id="🌼-¡bienvenidos-a-plantasia-🌼">🌼 ¡Bienvenidos a Plantasia! 🌼</h1>
 <p><strong>Plantasia</strong> fue diseñada con el fin de mostrar una app de venta de plantas, utilizando los servicios de Firebase dando lugar a consultas de ordenes de compra y mostrar los productos y su descripción. Haciendo la app mas intuitiva e interactiva con librerías, tambien implementa desde el formulario de contacto poder enviar las consultas a un e-mail personal.</p>
