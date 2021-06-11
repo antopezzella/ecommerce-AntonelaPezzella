@@ -16,13 +16,6 @@ export const ShoppingCart = ({children}) => {
     return false
   }
 
-    function finalPrice (){
-    const precioTotal = cartItems.reduce((a,b)=>(a + (b.precio * b.qty)),0)
-    
-    return precioTotal;
-  }
-
-
   const addQuant = (item, quant) => {
     const filter = [...cartItems]
     filter.forEach (i => {
@@ -59,7 +52,7 @@ export const ShoppingCart = ({children}) => {
 
   
   return (
-    <CartContext.Provider value={{ cartItems, clearItems, addItem, removeItems, getUnits, empty, isInCart, finalPrice }}>
+    <CartContext.Provider value={{cartItems, clearItems, addItem, removeItems, getUnits, empty, isInCart}}>
       {children}
     </CartContext.Provider>
   )

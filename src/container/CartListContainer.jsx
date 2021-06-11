@@ -13,13 +13,9 @@ const CartListContainer = () => {
     return totalPrice;
   }
 
-  const finalPrice = () => {
-    const filter = [...cartItems];
-    let price = 0;
-    filter.forEach (i => {
-      price = price + i.price * i.qty;
-    })
-    return price;
+ const finalPrice =() =>{
+    const precioTotal = cartItems.reduce((a,b)=>(a + (b.precio * b.qty)),0)  
+    return precioTotal;
   }
 
   return ( 

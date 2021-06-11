@@ -12,8 +12,6 @@ import Footer from './components/Footer'
 import { ShoppingCart } from './context/cartContext'
 import Contacto from './components/Contacto'
 
-
-
 function App() {
   return (
   <ShoppingCart>

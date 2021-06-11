@@ -18,7 +18,7 @@ export default function ContactUs() {
   return (
   <section className="contenedor-formulario">
       <h2 className="titleContacto">¡Estamos para ayudarte!</h2>
-      <p className="texto">Escribinos tu consulta:</p>
+      <p className="texto" style={{marginBottom:"1.9em"}}>Escribinos tu consulta, en breve te responderemos.</p>
     <form className="contact-form" onSubmit={sendEmail}>
       <input type="hidden" name="contact_number" />
       <label className="texto2">Nombre y apellido</label>
@@ -27,7 +27,7 @@ export default function ContactUs() {
       <input type="email" name="user_email" />
       <label className="texto2">Mensaje</label>
       <textarea name="message" />
-      <input type="submit" value="Enviar" className="btn-enviar-form"/>
+      <input type="submit" value="Enviar" className="btn-enviar-form" style={{marginTop:"1.2em"}}/>
     </form>
   </section>
   );

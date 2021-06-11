@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 import ItemCountContainer from '../../container/ItemCountContainer'
 import './item.css'
 
@@ -20,6 +21,7 @@ const ItemDetail = ({datos, onAdd}) => {
                           </div>
                             <ItemCountContainer datos={datos} onAdd={onAdd} />
                           <br/>
+                          <Link to="/"><button type="button" className="btn-shop" style={{marginTop:"1em"}}>Volver al catálogo</button></Link>
                           <h2 className="consejos">Consejos</h2>
                           <p className="consejosTexto">{datos.consejos}</p>
                             <div className="buscar text-left">

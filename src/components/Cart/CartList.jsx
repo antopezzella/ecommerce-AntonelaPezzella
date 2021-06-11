@@ -11,7 +11,6 @@ export const CartList = ({cartItems, totalPrice, clearItems, finalPrice}) => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-
   return(
     <>
       <div className="shopping-bg">
@@ -27,10 +26,10 @@ export const CartList = ({cartItems, totalPrice, clearItems, finalPrice}) => {
           <h6 className="col-xl-12 col-md-12 col-sm-12" style={{ display: cartItems.length !== 0 ? "none" : "block", textAlign:"center"}}>Aun no tenés productos en el carrito</h6>
           <Link to={'/productos'}><button className="btn-shop col-lg-12 col-md-12 col-xs-12 col-12" style={{display: cartItems.length !== 0 ? "none" : "inline", marginTop:"0.5em"}}>Ir al catálogo</button></Link>
           <div className="btn col-lg-12 col-md-12 col-xs-12 col-12" style={{display: cartItems.length !== 0 ? "none" : "inline" }}><BuscarOrder/></div>
-          <h6 className="texto col-xl-2 col-md-2 col-sm-3" style={{display: !cartItems.length ? "none" : "block"}}>TOTAL</h6>
+          <h6 className="texto col-xl-2 col-md-2 col-sm-3" style={{display: !cartItems.length ? "none" : "block"}}>TOTAL: </h6>
           <h6 id="totalPrice" className="texto col-xl-2 col-md-2 col-sm-3" style={{display: !cartItems.length ? "none" : "block"}}>$ {finalPrice}</h6>
         </div>
-        <hr style={{display: !cartItems.length ? "none" : "block"}}/>
+          <hr style={{display: !cartItems.length ? "none" : "block"}}/>
         <div style={{textAlign:"center"}}>
           <button className="btn-shop col-lg-5 col-md-5 col-xs-5 col-11" onClick={clearItems} style={{display: !cartItems.length && "none", width:"15%"}}>Vaciar carrito</button>
           <button type="button" className="btn-shop col-lg-5 col-md-5 col-xs-5 col-11" variant="primary" onClick={handleShow} style={{display: !cartItems.length && "none", width:"15%"}}>Finalizar compra</button>

@@ -50,8 +50,6 @@ export const CheckOutContainer = ({ finalPrice }) => {
         setBuyer({});
         clearItems();
       });
-
-      
   };
 
   

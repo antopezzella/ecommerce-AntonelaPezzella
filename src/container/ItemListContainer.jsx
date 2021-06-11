@@ -54,16 +54,9 @@ export default function ItemListContainer() {
               <Carousel/> 
           </div>
         </div>
-            <div className="row">
-                <div className="col-md-4 img1 content-gd">
-                    <img src="" className="img-fluid" alt="" />
-                </div>
-                <div className="col-md-4 img1 content-gd">
-                    <img src="" className="img-fluid" alt="" />
-                </div>
-            </div>
+
     
-<div className="contendedor" style={{textAlign:'center'}}>
+<div className="contendedor" style={{textAlign:'center', marginBottom:"6em"}}>
     <h2 className="title" >Catálogo</h2>
     <ItemList productos={datos}/>
      </div>
