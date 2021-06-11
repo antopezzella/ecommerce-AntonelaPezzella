@@ -22,7 +22,8 @@
 <h2 id="dependencias">Dependencias</h2>
 <p><strong>Email-Js</strong>: Permite enviar por email un formulario de contacto y recibir una respuesta.<br>
 <strong>Firebase</strong><br>
-<strong>React-Router-Dom</strong></p>
+<strong>React-Router-Dom</strong><br>
+<strong>React Bootstrap</strong></p>
 <h2 id="rutas">Rutas</h2>
 
 <table>
