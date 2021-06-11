@@ -11,7 +11,7 @@ export const CheckOutContainer = ({ finalPrice }) => {
   const [validated, setValidated] = useState(false);
   const [buyer, setBuyer] = useState({});
   const [id, setId] = useState('');
-  const { cartItems, clearItems } = useCartContext(); 
+  const { cartItems, clearItems, setOrderId } = useCartContext(); 
 
   const handleInput = (e) => {
     const { name, value, form } = e.target;
@@ -40,6 +40,7 @@ export const CheckOutContainer = ({ finalPrice }) => {
       .add(newOrder)
       .then(({ id }) => {
         setId(id);
+        setOrderId(id)
         console.log(id);
       })
       .catch((err) => {
@@ -58,9 +59,9 @@ export const CheckOutContainer = ({ finalPrice }) => {
     <>
       {id.length ? 
         <div style={{ textAlign: 'center' }}>
-          <p>Tu identificador de orden es:</p><br/>
+          <p>Tu número de orden es: </p>
           <p style={{ color: 'white', backgroundColor: 'black', fontSize: '20px', padding: '5px 8px'}}>{id}</p>
-          <p style={{ marginTop: '20px' }}>Guarda este número para el seguimiento del pedido.</p>
+          <p style={{ marginTop: '20px', fontWeight:"600"}}>Guarda este número para el seguimiento del pedido.</p>
           <p>En breve recibirás un mail con la confirmación del pedido.
             ¡Gracias por haber comprado en Plantasia!</p>
           <Link to="/"><button type="button" className="btn-shop">Volver</button></Link>
@@ -90,12 +91,12 @@ export const CheckOutContainer = ({ finalPrice }) => {
             </Form.Group>
             <Form.Group as={Col} md="6" controlId="validationCustom02">
               <Form.Label>Teléfono</Form.Label>
-              <Form.Control required type="tel" placeholder="+54..." pattern='^\+?\d{0,13}' name="teléfono"/>
+              <Form.Control required type="tel" placeholder="+54..." pattern='^\+?\d{0,13}' name="telÃ©fono"/>
               <Form.Control.Feedback>Válido</Form.Control.Feedback>
               <Form.Control.Feedback type="invalid">Ingrese un teléfono válido</Form.Control.Feedback>
             </Form.Group>
           </Row>
-          <Button type="submit" onClick={onSubmit}>Enviar</Button>
+          <Button type="submit" className="btn-shop" onClick={onSubmit}>Enviar</Button>
         </Form>
       </>
       }

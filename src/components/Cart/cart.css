@@ -9,7 +9,40 @@
     margin-bottom:20px;
   }
 
-.texto {
+.texto1 {
+  text-align: center;
+  font-size:0.9em;
   font-family: 'Open Sans';
+  margin-bottom:4em;
 }
 
+.title {
+  text-align: center;
+  color:#acbc9c;
+  margin-top: 2em;
+  margin-bottom:0.5em;
+  font-family: "Merriweather", serif;
+}
+
+.input {
+  margin-top:0.5em;
+  border-color: #acbc9c;
+  border-radius: 5px;
+}
+
+.title2 {
+  text-align: center;
+  color:#ce99b8;
+  margin-top: 2em;
+  margin-bottom:0.5em;
+  font-family: "Merriweather", serif;
+}
+
+.image-product {
+  margin-bottom: 1.5em;
+}
+
+.texto2 {
+  font-size:0.9em;
+  font-family: 'Open Sans';
+}

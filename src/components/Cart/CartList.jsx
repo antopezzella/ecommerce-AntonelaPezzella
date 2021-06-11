@@ -4,12 +4,13 @@ import './cart.css';
 import { Link } from 'react-router-dom'; 
 import { Modal } from 'react-bootstrap';
 import { CheckOutContainer } from '../../container/CheckOutContainer';
+import BuscarOrder from '../Orders/BuscarOrder';
 
 export const CartList = ({cartItems, totalPrice, clearItems, finalPrice}) => {
-
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
 
   return(
     <>
@@ -21,12 +22,13 @@ export const CartList = ({cartItems, totalPrice, clearItems, finalPrice}) => {
           </div>
           )}
         </div>
-        <hr style={{display: !cartItems.length ? "none" : "block"}}/>
+        <hr style={{display: !cartItems.length ? "none" : "block", textAlign:"center"}}/>
         <div className="row d-flex justify-content-center" style={{display: cartItems.length && "none"}}> 
-          <h6 className="col-xl-12 col-md-12 col-sm-12" style={{ display: cartItems.length !== 0 ? "none" : "block", textAlign:"center"}}>Aun no tienes productos en el carrito</h6>
-          <Link to={'/productos'}><button className="btn col-lg-12 col-md-12 col-xs-12 col-12" style={{display: cartItems.length !== 0 ? "none" : "inline" }}>Ir al catalogo</button></Link>
-          <h6 className="col-xl-2 col-md-2 col-sm-3" style={{display: !cartItems.length ? "none" : "block"}}>TOTAL</h6>
-          <h6 id="totalPrice" className="price col-xl-2 col-md-2 col-sm-3" style={{display: !cartItems.length ? "none" : "block"}}>$ {finalPrice}</h6>
+          <h6 className="col-xl-12 col-md-12 col-sm-12" style={{ display: cartItems.length !== 0 ? "none" : "block", textAlign:"center"}}>Aun no tenés productos en el carrito</h6>
+          <Link to={'/productos'}><button className="btn-shop col-lg-12 col-md-12 col-xs-12 col-12" style={{display: cartItems.length !== 0 ? "none" : "inline", marginTop:"0.5em"}}>Ir al catálogo</button></Link>
+          <div className="btn col-lg-12 col-md-12 col-xs-12 col-12" style={{display: cartItems.length !== 0 ? "none" : "inline" }}><BuscarOrder/></div>
+          <h6 className="texto col-xl-2 col-md-2 col-sm-3" style={{display: !cartItems.length ? "none" : "block"}}>TOTAL</h6>
+          <h6 id="totalPrice" className="texto col-xl-2 col-md-2 col-sm-3" style={{display: !cartItems.length ? "none" : "block"}}>$ {finalPrice}</h6>
         </div>
         <hr style={{display: !cartItems.length ? "none" : "block"}}/>
         <div style={{textAlign:"center"}}>

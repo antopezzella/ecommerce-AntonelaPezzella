@@ -27,7 +27,7 @@ export default function ContactUs() {
       <input type="email" name="user_email" />
       <label className="texto2">Mensaje</label>
       <textarea name="message" />
-      <input type="submit" value="Send" className="btn-enviar-form"/>
+      <input type="submit" value="Enviar" className="btn-enviar-form"/>
     </form>
   </section>
   );
