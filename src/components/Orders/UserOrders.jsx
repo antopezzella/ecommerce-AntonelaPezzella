@@ -9,7 +9,9 @@ import '../Cart/cart.css'
     const [items, setItems] = useState([])
     const [buyer, setBuyer] = useState([])
     const [status, setStatus]= useState('')
+    const [actu , setActu] = useState("status")
     const [error , setError] = useState(false)
+ 
   
     useEffect(() => {
         const db = getFirestore();
@@ -44,6 +46,7 @@ import '../Cart/cart.css'
                 }
             }
 
+       
 
     return (
         <>
@@ -59,6 +62,9 @@ import '../Cart/cart.css'
           <div className="col-lg-3 col-md-3 col-sm-3 col-6">
             <p className="texto"><strong> Cantidad: </strong> {x.qty}</p>
           </div>
+          <div className="texto col-lg-2 col-md-2 col-sm-2 col-12">
+            <h6>$ {items.total}</h6>
+          </div>
           <div className="texto2 col-lg-1 col-md-1 col-sm-1 col-6">
              Fecha: {fecha(items.date)}
           </div>
@@ -69,7 +75,7 @@ import '../Cart/cart.css'
           )}
           <div className="row d-flex align-items-center" style={{marginTop:"2.5em"}}>
             <p className="texto1 col-md-6 col-md-2 col-sm-2 col-6" style={{fontWeight:"500", backgroundColor:"#acbc9c", color:"white", padding:"5px"}}>Orden: {id}</p>
-            <p className="texto1 col-md-6 col-md-2 col-sm-2 col-6" style={{fontWeight:"500", backgroundColor:"#acbc9c", color:"white",  padding:"5px"}}>Estado: En proceso</p>
+            <p className="texto1 col-md-6 col-md-2 col-sm-2 col-6" style={{fontWeight:"500", backgroundColor:"#acbc9c", color:"white",  padding:"5px"}}>Estado: {status}</p>
           </div>
           <div style={{textAlign:"center"}}>
             <Link to="/"><button type="button" className="btn-shop">Volver al catálogo</button></Link>
