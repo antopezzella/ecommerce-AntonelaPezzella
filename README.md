@@ -2,7 +2,7 @@
 
 <h1 id="🌼-¡bienvenidos-a-plantasia-🌼">🌼 ¡Bienvenidos a Plantasia! 🌼</h1>
 <p><strong>Plantasia</strong> fue diseñada con el fin de mostrar una app de venta de plantas, utilizando los servicios de Firebase dando lugar a consultas de ordenes de compra y mostrar los productos y su descripción. Haciendo la app mas intuitiva e interactiva con librerías, tambien implementa desde el formulario de contacto poder enviar las consultas a un e-mail personal.</p>
-![](![image](https://user-images.githubusercontent.com/75953223/121734107-b394a580-caca-11eb-816a-0dcdd5265498.png))
+<img src="Plantasia-gif"/>
 
 <h1 id="librerías-descargadas">Librerías descargadas</h1>
 <p><strong>Plantasia</strong> es una app realizada a partir de React Js, la lógica de los componentes está escrita en JavaScript para crear interfaces de usuario.</p>
